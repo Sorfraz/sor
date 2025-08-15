@@ -1,0 +1,91 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Pochaa 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+      text-align: center;
+      transition: all 0.5s ease;
+    }
+
+    .page {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .page.active {
+      display: flex;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5em;
+      max-width: 600px;
+      padding: 0 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #fff;
+      color: #ff6f91;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffe0e9;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="page active" id="page1">
+    <h1>You are very cute babyyy 😘</h1>
+    <button onclick="nextPage(2)">Click here for next</button>
+  </div>
+
+  <div class="page" id="page2">
+    <h1>You are my one and onlyyy personal property 💍</h1>
+    <button onclick="nextPage(3)">Click here for next</button>
+  </div>
+
+  <div class="page" id="page3">
+    <h1>To My Dearest Pochaa 💖</h1>
+    <p>
+      From the moment I met you, everything changed. Your smile lights up my darkest days, and your laugh is the sweetest melody I’ve ever heard. You are not just my girlfriend—you are my best friend, my confidante, my forever. I love the way you care, the way you tease, and the way you make me feel like I’m the luckiest person alive. You are my home, my heart, and my everything. I promise to stand by you, to cherish you, and to love you more with every passing day. You are my Pochaa, and I’m yours—completely and endlessly. 💞
+    </p>
+  </div>
+
+  <script>
+    function nextPage(pageNum) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page' + pageNum).classList.add('active');
+    }
+  </script>
+</body>
+</html>
